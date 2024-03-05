@@ -1,0 +1,19 @@
+{
+  "name": "bs-test-simple-crud-api",
+  "version": "1.0.0",
+  "description": "Test task for the company Sector Business",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UhaBach/bs-test-simple-crud-api.git"
+  },
+  "author": "Ivanov Vladimir (UhaBach)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UhaBach/bs-test-simple-crud-api/issues"
+  },
+  "homepage": "https://github.com/UhaBach/bs-test-simple-crud-api#readme"
+}
