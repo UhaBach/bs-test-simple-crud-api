@@ -1,7 +1,4 @@
-import { IsAlpha, IsDefined, IsEmail, IsEnum, IsNotEmpty, IsString, MaxLength, MinLength, Validate } from "class-validator";
-import { FileExtension } from "../utils/file-extension-validator";
-import { FileExist } from "../utils/file-exist-validator";
-import { FileSize } from "../utils/file-size-validator";
+import { IsAlpha, IsDefined, IsEmail, IsEnum, IsNotEmpty, IsString, MaxLength, MinLength } from "class-validator";
 
 export class Update {
     @IsDefined()
@@ -26,14 +23,6 @@ export class Update {
     @IsDefined()
     @IsEnum({ MALE: "Male", FEMALE: "Female" })
     gender: string;
-
-    @IsDefined()
-    @IsString()
-    @IsNotEmpty()
-    @Validate(FileExtension)
-    @Validate(FileExist)
-    @Validate(FileSize)
-    photo: string;
 }
 
 // enum Gender{

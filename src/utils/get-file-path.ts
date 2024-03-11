@@ -1,5 +1,7 @@
 import path from "path";
 import { __dirname } from "./get-dirname";
+import dotenv from "dotenv";
+dotenv.config();
 
 export function getFilePath(text: string) {
     const splited = __dirname.split("\\");

@@ -5,6 +5,9 @@ import { routes } from "./src/controllers/index";
 import { middlewaresList } from "./src/middleware/index";
 import { context } from "./src/models/db-context";
 import { authCheck } from "./src/middleware/auth-check";
+import multer from "multer";
+
+const upload = multer();
 
 dotenv.config();
 const port = process.env.PORT || 5000;
@@ -16,6 +19,7 @@ function start() {
         });
 
         app.use(express.json());
+        app.use(express.urlencoded({ extended: true }));
 
         useExpressServer(app, {
             controllers: routes,
